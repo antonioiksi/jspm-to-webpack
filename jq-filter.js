@@ -18,27 +18,44 @@ async function stepJQ(filter, jsonPathOrData, options) {
 }
 
 (async() => {
-    let filter = '.jspm.dependencies'
     
-    let f_name = await stepJQ(filter, jsonPath, {output: 'pretty'})
-    let data = fs.readFileSync(f_name, 'utf8');
+    // STEP1 get dependencies
+    let filter1 = '.jspm.dependencies'
+    let f_name1 = await stepJQ(filter1, jsonPath, {output: 'pretty'})
+    let data = fs.readFileSync(f_name1, 'utf8');
     console.log(data)
 
-    // let filter = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false ) ]'
-    // let filter = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value} ] 
-    filter = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add'
-
-    f_name = await stepJQ(filter, f_name, {output: 'pretty'})
-    data = fs.readFileSync(f_name, 'utf8');
+    // STEP2 remove jspm and systemjs packs
+    // let filter2 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false ) ]'
+    // let filter2 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value} ] 
+    let filter2 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add '
+    let f_name2 = await stepJQ(filter2, f_name1, {output: 'pretty'})
+    data = fs.readFileSync(f_name2, 'utf8');
     console.log(data)
 
-    // filter = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add [] | "npm i --save \(sub( "github:|npm:"; ""))"'
-    filter = '.[] | "npm i --save \\(sub( "github:|npm:"; "")) &&"'
-    f_name = await stepJQ(filter, f_name, {raw: true})
-    data = fs.readFileSync(f_name, 'utf8');
+    // STEP3 filter npm packs and prepare install script
+    // let filter3 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add [] | "npm i --save \(sub( "github:|npm:"; ""))"'
+    // let filter3 = '.[] | "npm i --save \\(sub( "github:|npm:"; "")) &&"'
+    let filter3 = '.[] | select(contains("npm")) | "echo \\"\\(.)\\" &&\n npm i --save \\(.) &&"'
+    let f_name3 = await stepJQ(filter3, f_name2, {raw: true})
+    data = fs.readFileSync(f_name3, 'utf8');
     console.log(data)
+    fs.appendFileSync(f_name3, '\n', 'utf8')
+    fs.appendFileSync(f_name3, 'echo "ALL RIGHT😉"', 'utf8')
 
-    fs.appendFileSync(f_name, '\n', 'utf8')
-    fs.appendFileSync(f_name, 'echo "ALL RIGHT😉"', 'utf8')
+    // STEP4 filter github packs and prepare install script
+    // let filter4 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add [] | "npm i --save \(sub( "github:|npm:"; ""))"'
+    // let filter4 = '.[] | "npm i --save \\(sub( "github:|npm:"; "")) &&"'
+    // let filter4 = '.[] | select(contains("github")) | "echo \\"\\(.)\\" &&\n npm i --save \\(sub("@\\\\^|@"; "#v")) &&"'
+    let filter4 = '.[] | select(contains("github")) | sub("@\\\\^|@"; "#v") | sub("#vmaster";"") | "echo \\"\\(.)\\" &&\n npm i --save \\(.) &&"'
+    
+    let f_name4 = await stepJQ(filter4, f_name2, {raw: true})
+    data = fs.readFileSync(f_name4, 'utf8');
+    console.log(data)
+    fs.appendFileSync(f_name4, '\n', 'utf8')
+    fs.appendFileSync(f_name4, 'echo "ALL RIGHT😉"', 'utf8')
+
+
+
 })();
 

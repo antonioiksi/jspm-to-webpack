@@ -13,7 +13,8 @@
     "node-jq": "^1.11.0"
   },
   "dependencies": {
+    "angular-ui-tree": "github:angular-ui-tree/angular-ui-tree#v2.22.6",
     "mdPickers": "github:Niskigvan/mdPickers",
-    "xlsx": "github:SheetJS/js-xlsx"
+    "xlsx": "github:SheetJS/sheetjs#v0.14.0"
   }
 }

@@ -1,0 +1,114 @@
+npm i --save Niskigvan/mdPickers@master &&
+npm i --save SheetJS/sheetjs@^0.14.0 &&
+
+npm i --save angular@^1.7.8 &&
+npm i --save angular-animate@^1.7.9 &&
+
+npm i --save angular-aria@^1.7.8 &&
+npm i --save angular-cookies@^1.7.8 &&
+npm i --save angular-hotkeys@^1.7.0 &&
+npm i --save angular-i18n@^1.7.8 &&
+npm i --save angular-local-storage@^0.2.2 &&
+npm i --save angular-locale@^0.3.1 &&
+
+npm i --save angular-input-masks@^1.4.0 &&
+
+
+npm i --save angular-material@^1.1.18 &&
+npm i --save angular-material-icons@^0.7.1 &&
+
+npm i --save alirezamirian/angular-material-lightbox@^0.0.11 &&
+
+npm i --save angular-messages@^1.7.8 &&
+npm i --save angular-mock@^1.0.0 &&
+npm i --save angular-mocks@^1.5.9 &&
+npm i --save angular-openlayers-directive@^1.19.3 &&
+npm i --save angular-sanitize@^1.7.8 &&
+npm i --save angular-translate@^2.15.1 &&
+npm i --save angular-ui-calendar@^1.0.2 &&
+npm i --save angular-ui-mask@1.8.7 &&
+npm i --save angular-ui-router@^0.4.2 &&
+
+npm i --save angular-ui-tree/angular-ui-tree &&
+
+npm i --save angular-uuid@^0.0.4 &&
+npm i --save ast-types@^0.9.12 &&
+npm i --save babel-runtime@^6.18.0 &&
+npm i --save base64-js@^1.2.1 &&
+npm i --save blob@^0.0.4 &&
+npm i --save blob-stream@^0.1.3 &&
+npm i --save bn.js@^4.11.7 &&
+
+npm i --save buffer@^5.2.1 &&
+npm i --save clean-css@^3.4.8 &&
+npm i --save deep-diff@^1.0.2 &&
+npm i --save elasticsearch-browser@^14.1.0 &&
+npm i --save elliptic@^6.4.0 &&
+npm i --save eventemitter3@^3.1.0 &&
+npm i --save file-saver@^1.3.3 &&
+npm i --save fullcalendar@^3.4.0 &&
+
+
+npm i --save hash.js@^1.1.3 &&
+npm i --save iconv-lite@^0.4.13 &&
+npm i --save is-object-like-x@^1.3.0 &&
+npm i --save jquery@3.2.1 &&
+npm i --save json5@^2.1.0 &&
+npm i --save lf-ng-md-file-input@^1.5.1 &&
+npm i --save lodash@^4.17.4 &&
+
+-- npm i --save Niskigvan/mdPickers@master &&
+
+npm i --save minimalistic-assert@^1.0.0 &&
+
+npm i --save moment@2.19.1 &&
+npm i --save ng-handsontable@^0.13.0 &&
+npm i --save nomnom@^1.8.1 &&
+npm i --save numbro@^1.9.3 &&
+
+npm i --save openlayers@4.3.4 &&
+
+npm i --save pdfjs@2.0.0 &&
+npm i --save pdfjs-dist@^2.0.489 &&
+
+npm i --save pikaday@^1.4.0 &&
+
+!!! ERROR
+npm i --save pouchdb@^6.0.7 && 
+
+npm i --save pouchdb-adapter-memory@^6.1.0 &&
+npm i --save pouchdb-collections@6.1.0 &&
+
+?????
+npm i --save Niskigvan/pouchdb-find@master &&
+
+
+npm i --save pouchdb-promise@6.1.0 &&
+npm i --save pouchdb-utils@6.1.0 &&
+npm i --save proj4@^2.4.4 &&
+
+!!!!
+npm i --save protobi/js-xlsx@^0.8.6 &&
+
+!!!
+npm i --save reflect-metadata@^0.1.8 &&
+
+
+npm i --save rx@^3.1.2 &&
+npm i --save safe-buffer@^5.1.1 &&
+npm i --save sift@^7.0.1 &&
+
+ERROR
+npm i --save sockjs/sockjs-client@1.1.4 &&
+
+
+npm i --save streamsaver@^1.0.1 &&
+npm i --save text-encoding@^0.6.4 &&
+npm i --save tinymce@^4.9.2 &&
+npm i --save tslib@^1.7.1 &&
+npm i --save ui-router-extras@^0.1.2 &&
+npm i --save underscore@^1.8.3 &&
+npm i --save web-streams-polyfill@^1.3.2 &&
+npm i --save xregexp@^3.1.1 &&
+npm i --save zeroclipboard@^2.2.0 &&
+echo "ALL RIGHT😉"
