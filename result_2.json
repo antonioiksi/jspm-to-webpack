@@ -99,7 +99,7 @@ echo "npm:pdfjs@2.0.0" &&
 echo "npm:pdfjs-dist@^2.0.489" &&
  npm i --save npm:pdfjs-dist@^2.0.489 &&
 
-!!!! FAILED
+!!!! FAILED 
 echo "npm:pikaday@^1.4.0" &&
  npm i --save npm:pikaday@^1.4.0 &&
 echo "npm:pouchdb@^6.0.7" &&
