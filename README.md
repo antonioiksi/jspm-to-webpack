@@ -26,6 +26,7 @@ Copy src from `jspm` projects and setup webpack
 
 
 
+---
 
 ```txt
 "Niskigvan/mdPickers": "github:Niskigvan/mdPickers@master"                              EQUAL mdPickers CHECKED     npm i --save Niskigvan/mdPickers 
