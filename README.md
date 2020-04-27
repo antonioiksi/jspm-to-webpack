@@ -23,13 +23,27 @@ Create new project `npm init -y` and lets try to install jspm packages!
 > Attentivly check out installation process, if any package fails the whole script (3.github-install.sh | 3.npm-install.sh) would be stopped! 
 
 
+> output/3.github-install.sh
+```
+$ # rename npm i --save github:alirezamirian/angular-material-lightbox#v0.0.11
+$ # into 
+$ npm i --save github:alirezamirian/angular-material-lightbox#0.0.11
+```
+
+> output/3.npm-install.sh
+```
+$ # rename angular-mask@^1.4.0
+$ # into 
+$ npm i --save angular-input-masks@^1.4.0
+```
+
 COMMING SOON!!! 
 IN PROGRESS!!!
 ## Step 4
 Copy src from `jspm` projects and setup webpack
 
 
-
+gulp
 
 ---
 ## NOTES
@@ -48,7 +62,7 @@ Copy src from `jspm` projects and setup webpack
 
 "pouchdb-find": "github:Niskigvan/pouchdb-find@master"                                  ???EEMS LIKE                  npm i --save pouchdb-find@^6.4.3                                                                       
 
-"protobi/js-xlsx": "github:protobi/js-xlsx@^0.8.6"                                      THIS FORM FROM SheetJS/sheetjs  npm i --ignore-scripts  --save github:protobi/js-xlsx#v0.8.6     
+"protobi/js-xlsx": "github:protobi/js-xlsx@^0.8.6"                                      THIS FORK FROM SheetJS/sheetjs  npm i --ignore-scripts  --save github:protobi/js-xlsx#v0.8.6     
 
 "reflect-metadata": "npm:reflect-metadata@^0.1.8"           ERROR RELODING          npm i --ignore-scripts --save npm:reflect-metadata@^0.1.8
 

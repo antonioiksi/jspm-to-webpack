@@ -52,7 +52,7 @@ async function stepJQ(filter, jsonPathOrData, options, resultPath) {
     let resultPath3 = `${dir_output}/3.npm-install.sh`
     // let filter3 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add [] | "npm i --save \(sub( "github:|npm:"; ""))"'
     // let filter3 = '.[] | "npm i --save \\(sub( "github:|npm:"; "")) &&"'
-    let filter3 = '.[] | select(contains("npm")) | "echo \\"npm i --save \\(.)\\" &&\n npm i --save \\(.) &&"'
+    let filter3 = '.[] | select(contains("npm")) | "echo \\"❗ npm i --save \\(.)\\" &&\n npm i --save \\(.) &&"'
     await stepJQ(filter3, resultPath2, {raw: true}, resultPath3)
     data = fs.readFileSync(resultPath3, 'utf8');
     console.log(data)
@@ -63,7 +63,7 @@ async function stepJQ(filter, jsonPathOrData, options, resultPath) {
     // let filter4 = '[to_entries[] | select(.value | contains("jspm") ==false and contains("systemjs") ==false )  | {(.key): .value}] | add [] | "npm i --save \(sub( "github:|npm:"; ""))"'
     // let filter4 = '.[] | "npm i --save \\(sub( "github:|npm:"; "")) &&"'
     // let filter4 = '.[] | select(contains("github")) | "echo \\"\\(.)\\" &&\n npm i --save \\(sub("@\\\\^|@"; "#v")) &&"'
-    let filter4 = '.[] | select(contains("github")) | sub("@\\\\^|@"; "#v") | sub("#vmaster";"") | "echo \\"npm i --save \\(.)\\" &&\n npm i --save \\(.) &&"'
+    let filter4 = '.[] | select(contains("github")) | sub("@\\\\^|@"; "#v") | sub("#vmaster";"") | "echo \\"❗ npm i --save \\(.)\\" &&\n npm i --save \\(.) &&"'
     
     await stepJQ(filter4, resultPath2, {raw: true}, resultPath4)
     data = fs.readFileSync(resultPath4, 'utf8');
