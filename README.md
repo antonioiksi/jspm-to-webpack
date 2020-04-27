@@ -1,4 +1,4 @@
-# Removing from JSPM to WEBPACK
+# From JSPM to WEBPACK
 
 ## Step 1
 As we got file `package.json` with `jspm` section prepare scripts for install packages
