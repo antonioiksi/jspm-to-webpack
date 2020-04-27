@@ -4,22 +4,28 @@ As we got file `package.json` with `jspm` section prepare scripts for install pa
 ## Step 1
 using the great tool `jq` 
 ```shell
-    npm install
+$ npm install
 ```
 
 ## Step 2
 Get scripts with install command for `npm` and `github` packages separatelly
-```shell
-    node jspm-get-packages.js package-with-jspm.json
-```
-The result will be save in `output` filer with `.sh` ext
 
+```shell
+$ # if package with jspm = `package-with-jspm.json`
+$ npm start
+$ # or
+$ node jspm-get-packages.js {PACKAGE-WITH-JSPM.json}
+```
+The result will be save in files [`output/3.github-install.sh`, `output/3.npm-install.sh`]
+
+## Step 3
+Create new project `npm init -y` and lets try to install jspm packages!
 > Attentivly check out installation process, if any package fails the whole script (3.github-install.sh | 3.npm-install.sh) would be stopped! 
 
 
 COMMING SOON!!! 
 IN PROGRESS!!!
-## Step 3
+## Step 4
 Copy src from `jspm` projects and setup webpack
 
 
