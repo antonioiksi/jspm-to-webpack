@@ -7,11 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Run jspm-get-packages.js",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/jq-filter.js"
+            "program": "${workspaceFolder}/jspm-get-packages.js",
+            "args": ["./package-with-jspm.json"]
         }
     ]
 }
