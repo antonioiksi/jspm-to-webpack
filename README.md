@@ -1,25 +1,24 @@
 # From JSPM to WEBPACK
-
-## Step 1
 As we got file `package.json` with `jspm` section prepare scripts for install packages
 
+## Step 1
 using the great tool `jq` 
 ```shell
     npm install
-    node jq-filter.js # get file `package-with-jspm.json` and transfor into `result_2.json` - npm modules and `result_3.json` - github modules
 ```
 
 ## Step 2
-Install modules in your new scratch
+Get scripts with install command for `npm` and `github` packages separatelly
 ```shell
-    cp result_2.json result_2.json.sh 
-    ./result_2.json.sh # chmod 700 result_2.json.sh
-    cp result_3.json result_3.json.sh 
-    ./result_3.json.sh # chmod 700 result_3.json.sh
+    node jspm-get-packages.js package-with-jspm.json
 ```
-> Attentivly check out installation process, if any package fails the whole script (result_2.json.sh | result_3.json.sh) would be stopped! 
+The result will be save in `output` filer with `.sh` ext
+
+> Attentivly check out installation process, if any package fails the whole script (3.github-install.sh | 3.npm-install.sh) would be stopped! 
 
 
+COMMING SOON!!! 
+IN PROGRESS!!!
 ## Step 3
 Copy src from `jspm` projects and setup webpack
 
@@ -27,7 +26,7 @@ Copy src from `jspm` projects and setup webpack
 
 
 ---
-
+## NOTES
 ```txt
 "Niskigvan/mdPickers": "github:Niskigvan/mdPickers@master"                              EQUAL mdPickers CHECKED     npm i --save Niskigvan/mdPickers 
 
